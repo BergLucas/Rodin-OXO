@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="Case" org.eventb.core.type="ℙ(Case)"/>
+        <org.eventb.core.poIdentifier name="O" org.eventb.core.type="Case"/>
+        <org.eventb.core.poIdentifier name="X" org.eventb.core.type="Case"/>
+        <org.eventb.core.poIdentifier name="PieceType" org.eventb.core.type="ℙ(Case)"/>
+        <org.eventb.core.poIdentifier name="NOTHING" org.eventb.core.type="Case"/>
+        <org.eventb.core.poPredicate name="PieceTypf" org.eventb.core.predicate="partition(Case,{X},{O},{NOTHING})" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#+"/>
+        <org.eventb.core.poPredicate name="PieceTypg" org.eventb.core.predicate="PieceType⊆Case" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_kVe9UHrSEeyXT6OZ22zeYA"/>
+        <org.eventb.core.poPredicate name="PieceTyph" org.eventb.core.predicate="PieceType={X,O}" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_CN1lsHuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poIdentifier name="Player" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="PlayerPiece" org.eventb.core.type="ℙ(ℤ×Case)"/>
+        <org.eventb.core.poPredicate name="PlayerPiecf" org.eventb.core.predicate="Player⊆ℕ" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_KnP9IHuZEey2Xc71gmgycR"/>
+        <org.eventb.core.poPredicate name="PlayerPiecg" org.eventb.core.predicate="Player={1,2}" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_5KhLEHuZEey2Xc71gmgycQ"/>
+        <org.eventb.core.poPredicate name="PlayerPiech" org.eventb.core.predicate="PlayerPiece∈Player ⤖ PieceType" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_5KhLEXuZEey2Xc71gmgycQ"/>
+        <org.eventb.core.poPredicate name="PlayerPieci" org.eventb.core.predicate="PlayerPiece={1 ↦ X,2 ↦ O}" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_-ftHEnuZEey2Xc71gmgycQ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="board" org.eventb.core.type="ℙ(ℤ×ℤ×BOOL)"/>
+        <org.eventb.core.poIdentifier name="board_types" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
+        <org.eventb.core.poIdentifier name="current" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="is_finished" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poPredicate name="is_finishee" org.eventb.core.predicate="board∈1 ‥ 3 × 1 ‥ 3 → BOOL" org.eventb.core.source="/OXO/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poPredicate name="is_finishef" org.eventb.core.predicate="board_types∈1 ‥ 3 × 1 ‥ 3 → Case" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.invariant#_XCPY4HrCEeytm_A0FENZdw"/>
+        <org.eventb.core.poPredicate name="is_finisheg" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ 3⇒(∀j⦂ℤ·j∈1 ‥ 3⇒(board(i ↦ j)=FALSE⇔board_types(i ↦ j)=NOTHING)∧(board(i ↦ j)=TRUE⇔board_types(i ↦ j)∈PieceType))" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.invariant#_vmGycHrREeyXT6OZ22zeYA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishee"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlayerPiece∼(X)∈Player" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishee"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="X∈dom(PlayerPiece∼)∧PlayerPiece∼∈Case ⇸ ℤ" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#'|org.eventb.core.action#_G3I9AHujEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#'|org.eventb.core.action#_G3I9AHujEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishee"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTis_finishee" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="is_finished'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="current'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPis_finishee" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTIDENTis_finishee" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="place/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTHYPis_finishef)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i ↦ j∈dom(board_types)∧board_types∈ℤ × ℤ ⇸ Case" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7WHuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7WHuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTHYPis_finishef)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef">
+            <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="current'∈Player∧current'≠current" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_s7DRoHumEeyZZLmYy9_1sA"/>
+        </org.eventb.core.poPredicateSet>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="current'∈Player" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poSequent#place\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="current∈Player" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_KYlZlnuaEey2Xc71gmgycT"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_KYlZlnuaEey2Xc71gmgycT"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poSequent#place\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_iaM7W3uhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_iaM7W3uhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃current'⦂ℤ·current'∈Player∧current'≠current" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_s7DRoHumEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_s7DRoHumEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∀y⦂ℤ,x⦂ℤ·y∈1 ‥ 3∧x∈1 ‥ 3⇒current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case∧y ↦ x∈dom(board_types{i ↦ j ↦ PlayerPiece(current)})∧board_types{i ↦ j ↦ PlayerPiece(current)}∈ℤ × ℤ ⇸ Case)∧((∀y⦂ℤ,x⦂ℤ·y∈1 ‥ 3∧x∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)≠NOTHING)∨((∀y⦂ℤ,t⦂Case·y∈1 ‥ 3∧t∈PieceType⇒(∀x⦂ℤ·x∈1 ‥ 3⇒current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case∧y ↦ x∈dom(board_types{i ↦ j ↦ PlayerPiece(current)})∧board_types{i ↦ j ↦ PlayerPiece(current)}∈ℤ × ℤ ⇸ Case))∧((∃y⦂ℤ,t⦂Case·y∈1 ‥ 3∧t∈PieceType∧(∀x⦂ℤ·x∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)=t))∨((∀x⦂ℤ,t⦂Case·x∈1 ‥ 3∧t∈PieceType⇒(∀y⦂ℤ·y∈1 ‥ 3⇒current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case∧y ↦ x∈dom(board_types{i ↦ j ↦ PlayerPiece(current)})∧board_types{i ↦ j ↦ PlayerPiece(current)}∈ℤ × ℤ ⇸ Case))∧((∃x⦂ℤ,t⦂Case·x∈1 ‥ 3∧t∈PieceType∧(∀y⦂ℤ·y∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)=t))∨((∀t⦂Case·t∈PieceType⇒(∀c⦂ℤ×ℤ·c∈{1 ↦ 1,2 ↦ 2,3 ↦ 3}⇒current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case∧c∈dom(board_types{i ↦ j ↦ PlayerPiece(current)})∧board_types{i ↦ j ↦ PlayerPiece(current)}∈ℤ × ℤ ⇸ Case))∧((∃t⦂Case·t∈PieceType∧(∀c⦂ℤ×ℤ·c∈{1 ↦ 1,2 ↦ 2,3 ↦ 3}⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(c)=t))∨(∀t⦂Case·t∈PieceType⇒(∀c⦂ℤ×ℤ·c∈{1 ↦ 3,2 ↦ 2,3 ↦ 1}⇒current∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case∧c∈dom(board_types{i ↦ j ↦ PlayerPiece(current)})∧board_types{i ↦ j ↦ PlayerPiece(current)}∈ℤ × ℤ ⇸ Case)))))))))" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_Y2-p4HunEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_Y2-p4HunEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃is_finished'⦂BOOL·is_finished'=TRUE⇔(∀y⦂ℤ,x⦂ℤ·y∈1 ‥ 3∧x∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)≠NOTHING)∨(∃y⦂ℤ,t⦂Case·y∈1 ‥ 3∧t∈PieceType∧(∀x⦂ℤ·x∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)=t))∨(∃x⦂ℤ,t⦂Case·x∈1 ‥ 3∧t∈PieceType∧(∀y⦂ℤ·y∈1 ‥ 3⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(y ↦ x)=t))∨(∃t⦂Case·t∈PieceType∧(∀c⦂ℤ×ℤ·c∈{1 ↦ 1,2 ↦ 2,3 ↦ 3}⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(c)=t))∨(∃t⦂Case·t∈PieceType∧(∀c⦂ℤ×ℤ·c∈{1 ↦ 3,2 ↦ 2,3 ↦ 1}⇒(board_types{i ↦ j ↦ PlayerPiece(current)})(c)=t))" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_Y2-p4HunEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.action#_Y2-p4HunEeyZZLmYy9_1sA"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="place/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finishef"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="board_types{i ↦ j ↦ PlayerPiece(current)}=board_types{i ↦ j ↦ PlayerPiece(current)}" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.action#_KYlZlnuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.action#_KYlZlnuaEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poSequent#place\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTis_finishef" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="j" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="is_finished'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="player" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="current'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="i" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPis_finishef)" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTIDENTis_finishef" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈1 ‥ 3" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7VnuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="j∈1 ‥ 3" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7V3uhEey2Xc71gmgycQ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPis_finishef" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTHYPis_finishef)" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="board_types(i ↦ j)=NOTHING" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7WHuhEey2Xc71gmgycQ"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="is_finished=FALSE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_iaM7UXuhEey2Xc71gmgycQ|org.eventb.core.guard#_iaM7WXuhEey2Xc71gmgycQ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="reset/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finisheg"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlayerPiece∼(X)∈Player" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_o4AGYHu7EeyYQOActJ7lpg"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_YXfCwHutEeyar514R5fE5A"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poSequent#reset\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="reset/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finisheg"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="X∈dom(PlayerPiece∼)∧PlayerPiece∼∈Case ⇸ ℤ" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_YXfCwHutEeyar514R5fE5A|org.eventb.core.action#_OADT4Hu4EeyYQOActJ7lpg"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_YXfCwHutEeyar514R5fE5A|org.eventb.core.action#_OADT4Hu4EeyYQOActJ7lpg"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTALLHYPis_finisheg"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTis_finisheg" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="is_finished'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="current'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPis_finisheg" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#EVTIDENTis_finisheg" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="is_finished=TRUE" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.event#_YXfCwHutEeyar514R5fE5A|org.eventb.core.guard#_AhS4cHunEeyZZLmYy9_1sA"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/OXO/Machine4.bpo|org.eventb.core.poFile#Machine4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="current∈Player" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_DY6_IHuiEey2Xc71gmgycQ"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="is_finished∈BOOL" org.eventb.core.source="/OXO/Machine4.bum|org.eventb.core.machineFile#Machine4|org.eventb.core.invariant#_9zAGMXumEeyZZLmYy9_1sA"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
