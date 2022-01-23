@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1642866204550" org.eventb.texttools.text_representation="context Context1&#10;&#10;sets Case&#10;&#10;constants X O NOTHING PieceType&#10;&#10;axioms&#10;  @axm1 partition(Case, {X}, {O}, {NOTHING})&#10;  @axm2 PieceType ⊆ Case&#10;  @axm3 PieceType = {X, O}&#10;end&#10;" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.generated="false" org.eventb.core.identifier="Case"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Case, {X}, {O}, {NOTHING})"/>
+    <org.eventb.core.constant name="_eKDyUHrREeyXT6OZ22zeYA" org.eventb.core.generated="false" org.eventb.core.identifier="X"/>
+    <org.eventb.core.constant name="_eKEZYHrREeyXT6OZ22zeYA" org.eventb.core.generated="false" org.eventb.core.identifier="O"/>
+    <org.eventb.core.constant name="_eKEZYXrREeyXT6OZ22zeYA" org.eventb.core.generated="false" org.eventb.core.identifier="NOTHING"/>
+    <org.eventb.core.axiom name="_kVe9UHrSEeyXT6OZ22zeYA" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="PieceType ⊆ Case"/>
+    <org.eventb.core.constant name="_n8p4UHrSEeyXT6OZ22zeYA" org.eventb.core.generated="false" org.eventb.core.identifier="PieceType"/>
+    <org.eventb.core.axiom name="_CN1lsHuaEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.label="axm3" org.eventb.core.predicate="PieceType = {X, O}"/>
+</org.eventb.core.contextFile>

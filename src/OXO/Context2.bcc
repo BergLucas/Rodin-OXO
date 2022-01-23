@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/OXO/Context1.bcc|org.eventb.core.scContextFile#Context1" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.extendsContext#_KnP9IHuZEey2Xc71gmgycQ"/>
+    <org.eventb.core.scInternalContext name="Context1">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Case,{X},{O},{NOTHING})" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="PieceType⊆Case" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_kVe9UHrSEeyXT6OZ22zeYA" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="PieceType={X,O}" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_CN1lsHuaEey2Xc71gmgycQ" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="O" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKEZYHrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+        <org.eventb.core.scConstant name="X" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKDyUHrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+        <org.eventb.core.scConstant name="PieceType" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_n8p4UHrSEeyXT6OZ22zeYA" org.eventb.core.type="ℙ(Case)"/>
+        <org.eventb.core.scConstant name="NOTHING" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKEZYXrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+        <org.eventb.core.scCarrierSet name="Case" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Case)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scAxiom name="Context2" org.eventb.core.label="axm1" org.eventb.core.predicate="Player⊆ℕ" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_KnP9IHuZEey2Xc71gmgycR" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="Context3" org.eventb.core.label="axm2" org.eventb.core.predicate="Player={1,2}" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_5KhLEHuZEey2Xc71gmgycQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="Context4" org.eventb.core.label="axm3" org.eventb.core.predicate="PlayerPiece∈Player ⤖ PieceType" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_5KhLEXuZEey2Xc71gmgycQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="Context5" org.eventb.core.label="axm4" org.eventb.core.predicate="PlayerPiece={1 ↦ X,2 ↦ O}" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_-ftHEnuZEey2Xc71gmgycQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="Player" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.constant#_HjwEAHumEeyZZLmYy9_1sA" org.eventb.core.type="ℙ(ℤ)"/>
+    <org.eventb.core.scConstant name="PlayerPiece" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.constant#_HjwEAXumEeyZZLmYy9_1sA" org.eventb.core.type="ℙ(ℤ×Case)"/>
+</org.eventb.core.scContextFile>

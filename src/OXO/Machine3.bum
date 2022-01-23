@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1642880637366" org.eventb.texttools.text_representation="machine Machine3 refines Machine2  sees Context2&#10;&#10;variables board_types&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event place refines addPiece&#10;    any i j player&#10;    where&#10;      @grd1 i ∈ (1‥3)&#10;      @grd2 j ∈ (1‥3)&#10;      @grd3 player ∈ Player&#10;      @grd4 board_types(i↦j) = NOTHING&#10;    with&#10;      @type type = PlayerPiece(player)&#10;    then&#10;      @act1 board_types(i↦j) ≔ PlayerPiece(player)&#10;  end&#10;&#10;  event clear refines clear&#10;    then&#10;      @act1 board_types ≔ {i,j · i∈(1‥3) ∧ j∈(1‥3) ∣ (i↦j) ↦ NOTHING}&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.refinesMachine name="_lp7gUHuZEey2Xc71gmgycQ" org.eventb.core.target="Machine2"/>
+    <org.eventb.core.seesContext name="_lp7gUXuZEey2Xc71gmgycQ" org.eventb.core.target="Context2"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="_KYlZkHuaEey2Xc71gmgycQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="place">
+        <org.eventb.core.refinesEvent name="_KYlZkXuaEey2Xc71gmgycQ" org.eventb.core.target="addPiece"/>
+        <org.eventb.core.parameter name="_KYlZknuaEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.identifier="i"/>
+        <org.eventb.core.parameter name="_KYlZk3uaEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.identifier="j"/>
+        <org.eventb.core.guard name="_KYlZlHuaEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="i ∈ (1‥3)"/>
+        <org.eventb.core.guard name="_KYlZlXuaEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="j ∈ (1‥3)"/>
+        <org.eventb.core.action name="_KYlZlnuaEey2Xc71gmgycQ" org.eventb.core.assignment="board_types(i↦j) ≔ PlayerPiece(player)" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.witness name="_KYlZlnuaEey2Xc71gmgycR" org.eventb.core.generated="false" org.eventb.core.label="type" org.eventb.core.predicate="type = PlayerPiece(player)"/>
+        <org.eventb.core.guard name="_KYlZlnuaEey2Xc71gmgycT" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="player ∈ Player"/>
+        <org.eventb.core.guard name="_BU7yUHubEey2Xc71gmgycQ" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="board_types(i↦j) = NOTHING"/>
+        <org.eventb.core.parameter name="_MCzCMHumEeyZZLmYy9_1sA" org.eventb.core.generated="false" org.eventb.core.identifier="player"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_-HIw4HurEeyar514R5fE5A" org.eventb.core.generated="false" org.eventb.core.identifier="board_types"/>
+    <org.eventb.core.event name="_o4AGYHu7EeyYQOActJ7lpg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="clear">
+        <org.eventb.core.refinesEvent name="_o4AGYXu7EeyYQOActJ7lpg" org.eventb.core.target="clear"/>
+        <org.eventb.core.action name="_nbg9QnuaEey2Xc71gmgycQ" org.eventb.core.assignment="board_types ≔ {i,j · i∈(1‥3) ∧ j∈(1‥3) ∣ (i↦j) ↦ NOTHING}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

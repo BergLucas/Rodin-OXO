@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Case,{X},{O},{NOTHING})" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="PieceType⊆Case" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_kVe9UHrSEeyXT6OZ22zeYA" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="PieceType={X,O}" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.axiom#_CN1lsHuaEey2Xc71gmgycQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="O" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKEZYHrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+    <org.eventb.core.scConstant name="X" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKDyUHrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+    <org.eventb.core.scConstant name="PieceType" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_n8p4UHrSEeyXT6OZ22zeYA" org.eventb.core.type="ℙ(Case)"/>
+    <org.eventb.core.scConstant name="NOTHING" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.constant#_eKEZYXrREeyXT6OZ22zeYA" org.eventb.core.type="Case"/>
+    <org.eventb.core.scCarrierSet name="Case" org.eventb.core.source="/OXO/Context1.buc|org.eventb.core.contextFile#Context1|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Case)"/>
+</org.eventb.core.scContextFile>
