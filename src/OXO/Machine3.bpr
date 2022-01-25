@@ -393,6 +393,7 @@
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="board_types∈ℤ × ℤ ⇸ Case"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Player={1,2}"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="i∈1 ‥ 3"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀i⦂ℤ,j⦂ℤ·i∈1 ‥ 3∧j∈1 ‥ 3⇒(board(i ↦ j)=FALSE⇔board_types(i ↦ j)=NOTHING)∧(board(i ↦ j)=TRUE⇔board_types(i ↦ j)∈PieceType)"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬X=NOTHING"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬X=O"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="i ↦ j∈dom(board_types)∧board_types∈ℤ × ℤ ⇸ Case"/>
@@ -401,16 +402,15 @@
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="PlayerPiece∈Player ⤖ PieceType"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="j∈1 ‥ 3"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬O=NOTHING"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ 3⇒(∀j⦂ℤ·j∈1 ‥ 3⇒(board(i ↦ j)=FALSE⇔board_types(i ↦ j)=NOTHING)∧(board(i ↦ j)=TRUE⇔board_types(i ↦ j)∈PieceType))"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Case={X,O,NOTHING}"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="board_types∈1 ‥ 3 × 1 ‥ 3 → Case"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="player∈Player"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="PieceType={X,O}"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="PlayerPiece={1 ↦ X,2 ↦ O}"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>

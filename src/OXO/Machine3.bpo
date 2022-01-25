@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="Case" org.eventb.core.type="ℙ(Case)"/>
         <org.eventb.core.poIdentifier name="O" org.eventb.core.type="Case"/>
@@ -16,30 +16,30 @@
         <org.eventb.core.poPredicate name="PlayerPiech" org.eventb.core.predicate="PlayerPiece∈Player ⤖ PieceType" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_5KhLEXuZEey2Xc71gmgycQ"/>
         <org.eventb.core.poPredicate name="PlayerPieci" org.eventb.core.predicate="PlayerPiece={1 ↦ X,2 ↦ O}" org.eventb.core.source="/OXO/Context2.buc|org.eventb.core.contextFile#Context2|org.eventb.core.axiom#_-ftHEnuZEey2Xc71gmgycQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="board" org.eventb.core.type="ℙ(ℤ×ℤ×BOOL)"/>
         <org.eventb.core.poIdentifier name="board_types" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
         <org.eventb.core.poPredicate name="board_typet" org.eventb.core.predicate="board∈1 ‥ 3 × 1 ‥ 3 → BOOL" org.eventb.core.source="/OXO/Machine1.bum|org.eventb.core.machineFile#Machine1|org.eventb.core.invariant#)"/>
         <org.eventb.core.poPredicate name="board_typeu" org.eventb.core.predicate="board_types∈1 ‥ 3 × 1 ‥ 3 → Case" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.invariant#_XCPY4HrCEeytm_A0FENZdw"/>
-        <org.eventb.core.poPredicate name="board_typev" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ 3⇒(∀j⦂ℤ·j∈1 ‥ 3⇒(board(i ↦ j)=FALSE⇔board_types(i ↦ j)=NOTHING)∧(board(i ↦ j)=TRUE⇔board_types(i ↦ j)∈PieceType))" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.invariant#_vmGycHrREeyXT6OZ22zeYA"/>
+        <org.eventb.core.poPredicate name="board_typev" org.eventb.core.predicate="∀i⦂ℤ,j⦂ℤ·i∈1 ‥ 3∧j∈1 ‥ 3⇒(board(i ↦ j)=FALSE⇔board_types(i ↦ j)=NOTHING)∧(board(i ↦ j)=TRUE⇔board_types(i ↦ j)∈PieceType)" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.invariant#_vmGycHrREeyXT6OZ22zeYA"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTIDENTboard_typet" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPboard_typet" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTIDENTboard_typet" org.eventb.core.poStamp="0"/>
-    <org.eventb.core.poSequent name="place/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="place/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTHYPboard_typeu*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i ↦ j∈dom(board_types)∧board_types∈ℤ × ℤ ⇸ Case" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_BU7yUHubEey2Xc71gmgycQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_BU7yUHubEey2Xc71gmgycQ"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTHYPboard_typeu*"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="place/type/WWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of witness" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="place/type/WWD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of witness" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTALLHYPboard_typeu"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="player∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.witness#_KYlZlnuaEey2Xc71gmgycR"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.witness#_KYlZlnuaEey2Xc71gmgycR"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poSequent#place\/type\/WWD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="place/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="place/grd3/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTALLHYPboard_typeu"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="PlayerPiece(player)∈PieceType" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.event#_OKQrkHrCEeytm_A0FENZdw|org.eventb.core.guard#_STYdEHrCEeytm_A0FENZdw"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.event#_OKQrkHrCEeytm_A0FENZdw"/>
@@ -47,13 +47,13 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poSequent#place\/grd3\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="place/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="place/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTALLHYPboard_typeu"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="player∈dom(PlayerPiece)∧PlayerPiece∈ℤ ⇸ Case" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.action#_KYlZlnuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.action#_KYlZlnuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTALLHYPboard_typeu"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="place/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="place/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTALLHYPboard_typeu"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="board_types{i ↦ j ↦ PlayerPiece(player)}=board_types{i ↦ j ↦ PlayerPiece(player)}" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.event#_OKQrkHrCEeytm_A0FENZdw|org.eventb.core.action#_OKSgwHrCEeytm_A0FENZdw"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/OXO/Machine2.bum|org.eventb.core.machineFile#Machine2|org.eventb.core.event#_OKQrkHrCEeytm_A0FENZdw"/>
@@ -61,24 +61,24 @@
         <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poSequent#place\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTboard_typeu" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTIDENTboard_typeu" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="type" org.eventb.core.type="Case"/>
         <org.eventb.core.poIdentifier name="j" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poIdentifier name="player" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poIdentifier name="i" org.eventb.core.type="ℤ"/>
         <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPboard_typeu*" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTIDENTboard_typeu" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPboard_typeu*" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTIDENTboard_typeu" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="i∈1 ‥ 3" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_KYlZlHuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="j∈1 ‥ 3" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_KYlZlXuaEey2Xc71gmgycQ"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="player∈Player" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_KYlZlnuaEey2Xc71gmgycT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPboard_typeu" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTHYPboard_typeu*" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPboard_typeu" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTHYPboard_typeu*" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="board_types(i ↦ j)=NOTHING" org.eventb.core.source="/OXO/Machine3.bum|org.eventb.core.machineFile#Machine3|org.eventb.core.event#_KYlZkHuaEey2Xc71gmgycQ|org.eventb.core.guard#_BU7yUHubEey2Xc71gmgycQ"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTboard_typev" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTIDENTboard_typev" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="board_types'" org.eventb.core.type="ℙ(ℤ×ℤ×Case)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPboard_typev" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTIDENTboard_typev" org.eventb.core.poStamp="0"/>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPboard_typev" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#EVTIDENTboard_typev" org.eventb.core.poStamp="1"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/OXO/Machine3.bpo|org.eventb.core.poFile#Machine3|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1"/>
 </org.eventb.core.poFile>
