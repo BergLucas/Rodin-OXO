@@ -52,8 +52,8 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="i∈1 ‥ 3"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="i ↦ j∈dom(board)"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="board∈ℤ × ℤ ⇸ BOOL"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>
